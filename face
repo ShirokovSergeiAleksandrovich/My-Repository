@@ -1,0 +1,26 @@
+import function as rec
+import tkinter as tk
+from tkinter import filedialog
+
+
+
+
+rec.settings()
+
+print('выберите путь к папке в которой лежат фотографии известных лиц')
+path_dir_knw = filedialog.askdirectory()
+rec.path_known(path_dir_knw)
+
+rec.names_dir()
+
+rec.enc_known(path_dir_knw)
+
+print('выберите путь к папке в которой лежат фотографии на которых нужно распознать лица')
+path_dir_unknw = filedialog.askdirectory()
+rec.path_unknown(path_dir_unknw)
+
+rec.general_1(path_dir_unknw)
+
+rec.print_list_name()
+
+a = input('нажмите enter что бы закрыть ')
